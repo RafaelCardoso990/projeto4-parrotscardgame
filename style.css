@@ -1,61 +1,117 @@
-body {
-    background-color: #EEF9BF;
+
+* {
+    box-sizing: border-box;
+}
+* img{
+    width: 100px;
+    height: 100px;
 }
 
-.title {
-    text-align: center;
+body{
+    justify-content: center;
+    background-color: #EEF9BF;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+header {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    display: flex;
+    
+    justify-content: center;
     
 }
-
-.title h1 {
-    text-align: center;
+header h1{
+    width: 540px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 56px;
     line-height: 66px;
     letter-spacing: -0.004em;
-
     color: #75B79E;
+    text-align: center;
 }
-.box-card {
-    
-    
-    width: auto;
+
+main{
+    flex-wrap: wrap;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    
-  
-    
-}
-.box-card {
-    flex-direction: column;
 }
 
-.card {
+.letterSpace{
+    position: relative;
     width: 117px;
     height: 146px;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    display: flex;
-    background: #A7E9AF;
-    border: 1px solid #99CEA8;
-    box-sizing: border-box;
     border-radius: 5px;
-    
+    margin: 0 24px 30px 24px; 
 }
 
-@media (min-width: 520px) {
-  
-    body {
-        width: 100vw;
-        height: 100vh;
-        background-color: #EEF9BF;
+.card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+.change{
+    transform: rotateY(180deg);
+}
+
+.back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background: #A7E9AF;
+    border: 1px solid #99CEA8;
+    border-radius: 5px;
+}
+
+.front{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: #A7E9AF;
+    border: 1px solid #99CEA8;
+    border-radius: 5px;
+}
+
+.card img{
+    object-fit: cover;
+    height: 100px;
+    width: 100px;
+    border-radius: 0px;
+}
+
+p {
+    position: absolute;
+    top: 0;
+    right: 0;    
+    font-size: 20px;
+    position: relative;
+    margin: 10px;
+    font-family: roboto;
+    color: red;
+}
+
+@media (max-width:574px) {
+    
+    .imagens{
+        flex-direction: column;
     }
-    .box-card {
-        flex-direction: row;
+
+    .h1 {
+        font-size: 36px;
     }
 }
