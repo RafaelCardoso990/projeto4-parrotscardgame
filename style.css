@@ -38,6 +38,8 @@ main{
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .letterSpace{
@@ -105,10 +107,14 @@ p {
     color: red;
 }
 
-@media (max-width:574px) {
+@media (min-width:574px) {
     
-    .imagens{
-        flex-direction: column;
+    main{
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
     }
 
     .h1 {
